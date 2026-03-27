@@ -259,21 +259,30 @@ body {
 
 .photo-frame {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 10%;
-  border-radius: 50%;
+  object-position: center -20%;
   border: 3px solid var(--color-bg);
   box-shadow: var(--shadow-md);
   position: relative;
   z-index: 1;
+  transform: scale(1.15) translateX(-5%);
+}
+
+.photo-wrapper {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
 }
 
 .photo-accent {
@@ -285,6 +294,7 @@ body {
   border: 2px solid var(--color-accent-light);
   border-radius: 50%;
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .hero-greeting {
